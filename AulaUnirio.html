@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Estatística, Ciência de Dados e Sociedade</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Steven Dutt Ross" />
+    <link href="libs/remark-css/example.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Estatística, Ciência de Dados e Sociedade
+### Steven Dutt Ross
+
+---
+
+
+
+
+
+## Por que usar o R?
+&lt;P&gt;1 . O R é a principal ferramenta para estatística e para análise de dados. É mais do que um software estatístico, é uma linguagem de programação.
+&lt;P&gt;2. Você pode usá-lo facilmente em qualquer lugar.
+&lt;P&gt;3. É grátis. Você pode usa-lo em qualquer empresa, escola, em qualquer local sem ter que convencer o chefe a comprar uma licença.
+&lt;P&gt;4. Existem mais de 10.000 pacotes de contribuições de usuários disponíveis no site do R (cran). Muitos pacotes  são colocados pelos membros mais proeminentes de seus respectivos campos.
+&lt;P&gt;5. R tem uma grande (e crescente) comunidade de usuários. As listas de discussões fornecem acesso a muitos usuários e autores de pacotes que são especialistas em  seus campos.
+&lt;BR&gt;
+&lt;P&gt;OBS - Esses slides foram feitos no R
+
+---
+
+## Por que usar o R?
+
+![](AulaUnirio_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+&lt;BR&gt;
+Outras organizações que utilizam o R: IBGE, FGV, IBOPE, Ministério do planejamento, etc...
+
+--- 
+
+## Grandes organizações que usam o R
+- 1. Facebook - For behavior analysis related to status updates and profile pictures.
+- 2. Google - For advertising effectiveness and economic forecasting.
+- 3. Twitter - For data visualization and semantic clustering
+- 4. Microsoft - Acquired Revolution R company and use it for a variety of purposes.
+- 5. Uber - For statistical analysis
+- 6. Airbnb - Scale data science.
+- 7. IBM - Joined R Consortium Group
+- 8. ANZ - For credit risk modeling   
+- 9. HP
+- 10. Ford
+- 11. Roche
+- 12. New York Times - For data visualization
+- 13. Mckinsey
+- [Fonte](http://www.listendata.com/2016/12/companies-using-r.html?m=1)
+
+---
+
+## Número de pacotes do R ao longo do tempo
+![](AulaUnirio_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+---
+
+## Entender não basta 
+Não quero só que você entenda esse gráfico, mas também quero dar oportunidade para você construir diversas análises desse tipo.
+
+```
+## `geom_smooth()` using method = 'gam'
+```
+
+![](AulaUnirio_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+###Parece interessante?
+
+---
+
+## Estatística 
+um sistema formal de **signos** regidos por regras **gramaticais** que, quando combinadas,**geram significados**
+(visão estruturalista da linguagem)
+
+### Estatística como linguagem
+- 1. Natural: idiomas (oral, escrita, de sinais)
+- 2. Artificial: linguagem concebida por um indivíduo ou grupo (em vez de ter evoluído naturalmente)
+- 3. Formal:Matemática, Lógica, Computação e Estatística
+
+---
+
+## Estatística 
+### Estatística como ciência do aprendizado
+1. Estatística é a ciência do aprendizado a partir dos dados
+
+---
+
+## Estatística 
+### Estatística como ciência do aprendizado
+1. Estatística é a ciência do aprendizado a partir dos dados
+2. Sempre olhe os dados: A procedência dos dados é importante
+
+---
+
+## Estatística 
+### Estatística como ciência do aprendizado
+1. Estatística é a ciência do aprendizado a partir dos dados
+2. Sempre olhe os dados: A procedência dos dados é importante
+3. A variação está em toda parte
+
+---
+
+## Estatística 
+### Estatística como ciência do aprendizado
+1. Estatística é a ciência do aprendizado a partir dos dados
+2. Sempre olhe os dados: A procedência dos dados é importante
+3. A variação está em toda parte
+
+### Letramento (Literacia) e Numeramento (Numeracia)
+"Saber em uso",**saber agir no cotidiano** para resolver situações reais (em oposição ao"saber inerte", **acumulação de conteúdos** sem saber como utilizá-los)
+
+---
+
+## Sobre o trabalho final da disciplina
+
+Você deve **formular** um problema em seu contexto do mundo real, **planejar** seu trabalho estatístico em detalhes, **resolver** o problema através dos gráficos e estatísticas necessárias, e **concluir**, explicando que suas descobertas dizem sobre o contexto do mundo real (parecer)
+
+---
+
+## Registros e variáveis 
+
+Os registros são objetos descritos por um conjunto de dados, podendo ser pessoas, animais, municípios, estados ou objetos.
+
+Uma variável é qualquer característica do registro. Uma variável pode assumir valores diferentes para registros diferentes
+
+---
+
+
+## Variáveis qualitativas e quantitativas
+
+**Variáveis qualitativas**  posiciona um registro em um dos diversos grupos ou categorias. Também chamada de **Variável categórica**
+
+**Variáveis quantitativa**  assume valores númericoscom os quais faz sentido efetuarem-se operações aritméticas, tais como adição e cálculo de médias. Os valores de uma variável quantitativa são usualmente registrados em uma unidade de medida, tal como segundos ou quilogramas 
+
+---
+
+## O que é um banco de dados
+Iris Data: 50 flores de 03 espécies
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+Cada linha é um registro e cada coluna é um atributo (que chamamos de variável)
+
+---
+
+## Outro exemplo: Swiss Data
+Províncias da Suiça
+<div id="htmlwidget-be3c687f9d149b0503f4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be3c687f9d149b0503f4">{"x":{"filter":"none","fillContainer":false,"data":[["Courtelary","Delemont","Franches-Mnt","Moutier","Neuveville","Porrentruy","Broye","Glane","Gruyere","Sarine"],[80.2,83.1,92.5,85.8,76.9,76.1,83.8,92.4,82.4,82.9],[17,45.1,39.7,36.5,43.5,35.3,70.2,67.8,53.3,45.2],[15,6,5,12,17,9,16,14,12,16],[12,9,5,7,15,7,7,8,7,13],[9.96,84.84,93.4,33.77,5.16,90.57,92.85,97.16,97.67,91.38],[22.2,22.2,20.2,20.3,20.6,26.6,23.6,24.9,21,24.4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Fertility<\/th>\n      <th>Agriculture<\/th>\n      <th>Examination<\/th>\n      <th>Education<\/th>\n      <th>Catholic<\/th>\n      <th>Infant.Mortality<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+## Outro exemplo: Midwest Data
+Informações Demográficas dos municípios do Meio-Oeste
+
+```
+## [1] 437  28
+```
+
+<div id="htmlwidget-016f2c8d14d7bfd093b4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-016f2c8d14d7bfd093b4">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[561,562,563,564,565,566,567,568,569,570],["ADAMS","ALEXANDER","BOND","BOONE","BROWN","BUREAU","CALHOUN","CARROLL","CASS","CHAMPAIGN"],["IL","IL","IL","IL","IL","IL","IL","IL","IL","IL"],[0.052,0.014,0.022,0.017,0.018,0.05,0.017,0.027,0.024,0.058],[66090,10626,14991,30806,5836,35688,5322,16805,13437,173025],[1270.96154,759,681.409091,1812.11765,324.222222,713.76,313.058824,622.407407,559.875,2983.18966],[63917,7054,14477,29344,5264,35157,5298,16519,13384,146506],[1702,3496,429,127,547,50,1,111,16,16559],[98,19,35,46,14,65,8,30,8,331],[249,48,16,150,5,195,15,61,23,8033],[124,9,34,1139,6,221,0,84,6,1596],[96.7120593,66.3843403,96.5712761,95.2541713,90.1987663,98.5121049,99.5490417,98.2981256,99.6055667,84.6733131],[2.57527614,32.9004329,2.86171703,0.41225735,9.37285812,0.14010312,0.01878993,0.6605177,0.1190742,9.57029331],[0.14828264,0.1788067,0.23347342,0.14932156,0.23989034,0.18213405,0.15031943,0.1785183,0.0595371,0.19130183],[0.37675897,0.45172219,0.10673071,0.48691813,0.08567512,0.54640215,0.28184893,0.36298721,0.17116916,4.64268169],[0.18762294,0.08469791,0.22680275,3.69733169,0.10281014,0.61925577,0,0.49985123,0.04465282,0.92241006],[43298,6724,9669,19272,3979,23444,3583,11323,8825,95971],[75.1073953,59.7263534,69.3349881,75.4721876,68.861523,76.6294148,62.8244488,75.9516029,72.2719547,87.4993488],[19.6313918,11.2433076,17.0338194,17.2789539,14.475999,18.9046238,11.9173877,16.1971209,14.1076487,41.2958081],[4.35585939,2.87031529,4.48857172,4.19779992,3.36768032,3.27589149,3.20960089,3.05572728,3.20679887,17.7574476],[63628,10529,14235,30337,4815,35107,5241,16455,13081,154934],[96.2747768,99.0871447,94.9569742,98.4775693,82.5051405,98.3720018,98.4780158,97.9172865,97.3505991,89.5442855],[13.1514428,32.2442777,12.0688444,7.20901869,13.5202492,10.3996354,15.1497806,11.7107262,13.875086,15.5724373],[18.0117169,45.8265139,14.036061,11.1795358,13.0228887,14.1588185,13.7877614,17.2254616,17.9947841,14.1322336],[11.0097759,27.3856467,10.85209,5.53601292,11.1432109,8.17928731,12.9323308,10.0270366,11.9143432,17.5627276],[12.4438118,25.2289759,12.69741,6.21704745,19.2,11.0085864,21.0852713,9.52505219,13.6601796,8.1050169],[0,0,0,1,0,0,0,0,0,1],["AAR","LHR","AAR","ALU","AAR","AAR","LAR","AAR","AAR","HAU"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PID<\/th>\n      <th>county<\/th>\n      <th>state<\/th>\n      <th>area<\/th>\n      <th>poptotal<\/th>\n      <th>popdensity<\/th>\n      <th>popwhite<\/th>\n      <th>popblack<\/th>\n      <th>popamerindian<\/th>\n      <th>popasian<\/th>\n      <th>popother<\/th>\n      <th>percwhite<\/th>\n      <th>percblack<\/th>\n      <th>percamerindan<\/th>\n      <th>percasian<\/th>\n      <th>percother<\/th>\n      <th>popadults<\/th>\n      <th>perchsd<\/th>\n      <th>percollege<\/th>\n      <th>percprof<\/th>\n      <th>poppovertyknown<\/th>\n      <th>percpovertyknown<\/th>\n      <th>percbelowpoverty<\/th>\n      <th>percchildbelowpovert<\/th>\n      <th>percadultpoverty<\/th>\n      <th>percelderlypoverty<\/th>\n      <th>inmetro<\/th>\n      <th>category<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+## Outro exemplo: Mtcars Data
+Performance de carros (10 informações)
+<div id="htmlwidget-fb2b31e5e14472dad51a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fb2b31e5e14472dad51a">{"x":{"filter":"none","fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2],[6,6,4,6,8,6,8,4,4,6],[160,160,108,258,360,225,360,146.7,140.8,167.6],[110,110,93,110,175,105,245,62,95,123],[3.9,3.9,3.85,3.08,3.15,2.76,3.21,3.69,3.92,3.92],[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44],[16.46,17.02,18.61,19.44,17.02,20.22,15.84,20,22.9,18.3],[0,0,1,1,0,1,0,1,1,1],[1,1,1,0,0,0,0,0,0,0],[4,4,4,3,3,3,3,4,4,4],[4,4,1,1,2,1,4,2,2,4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+## Geralmente acompanhado de um DICIONÁRIO DE DADOS
+Por exemplo:
+* mpg: Miles/(US) gallon
+* cyl: Number of cylinders
+* disp: Displacement (cu.in.)
+* hp: Gross horsepower
+* drat:Rear axle ratio
+* wt: Weight (1000 lbs)
+* qsec: 1/4 mile time
+* vs: V/S
+* am: Transmission (0 = automatic, 1 = manual)
+* gear: Number of forward gears
+* carb: Number of carburetors
+
+---
+
+Por exemplo, esse banco de dados que estamos trabalhando tem 32 carros e 11 variáveis. No R isso pode ser verificado pelo comando dim(mtcars), e names(mtcars)
+
+```r
+dim(mtcars)
+```
+
+```
+## [1] 32 11
+```
+
+```r
+names(mtcars)
+```
+
+```
+##  [1] "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"   "am"   "gear"
+## [11] "carb"
+```
+
+---
+
+## O objetivo é extrair informações de um banco de dados
+Por exemplo:
+Valor médio das variáveis HP &amp; mpg e tabela dos CyL dos carros desse banco de dados
+
+```
+## [1] 146.6875
+```
+
+```
+## [1] 20.09062
+```
+
+```
+## 
+##  4  6  8 
+## 11  7 14
+```
+
+---
+
+## Outro modo de fazer isso é por meio de gráficos
+![](AulaUnirio_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+---
+
+## Criando vetores
+
+O comando c() pode ser usada para criar vetores de objetos juntando coisas.
+
+
+```r
+x &lt;- c(0.3, 0.9, 1.1)          ## numerico
+y &lt;- c(TRUE, FALSE, FALSE)     ## logico
+y &lt;- c(T, F, F)                ## logico
+z &lt;- c("a", "b", "c")          ## caracter
+w &lt;- 10:20                     ## inteiro
+k &lt;- c(1+9i, 2+4i, 8+2i)       ## complexo
+l &lt;- c("red","blue","green")   ## cores
+```
+
+---
+
+## Data.Frame: O seu banco de dados no R
+
+Podemos utilizar mais informações do que apenas dados de uma mesma classe, como um vetor ou uma matriz. Uma base de dados, em geral, é feita de dados de diversas classes diferentes.
+
+Como guardar informações de diversas classes diferentes? A resposta para isso é o data.frame. Por exemplo, se eu tivesse um departamento de uma empresa com esses funcionarios:
+
+
+```r
+Funcionarios &lt;- data.frame(nome = c("Marx", "Weber", "Durkheim","Arendt", "Maquiavel"),
+                           sexo = c("M", "M", "M", "F","M"),
+                           salario = c(1000, 1200, 1300, 2000, 500),              
+                           stringsAsFactors = FALSE)
+Funcionarios
+```
+
+```
+##        nome sexo salario
+## 1      Marx    M    1000
+## 2     Weber    M    1200
+## 3  Durkheim    M    1300
+## 4    Arendt    F    2000
+## 5 Maquiavel    M     500
+```
+
+---
+
+## Data.Frame: Outro banco de dados
+Outro exemplo. Se eu tivesse uma turma desse semestre com esses alunos:
+
+```r
+Turma &lt;- data.frame(nome_aluno = c("Jurgen Habermas", "Karl Popper", "John Rawls","Paulo Freire"),
+                           sexo = c("M", "M", "M","M"),
+                           CR = c(6.98, 7.01, 7.03, 8.88), stringsAsFactors = FALSE)
+```
+
+
+```
+##        nome_aluno sexo   CR
+## 1 Jurgen Habermas    M 6.98
+## 2     Karl Popper    M 7.01
+## 3      John Rawls    M 7.03
+## 4    Paulo Freire    M 8.88
+```
+
+---
+
+## Data.Frame: Outro banco de dados
+
+Para selecionar colunas em um data.frame é utilizado o simbolo $ 
+
+
+```r
+Funcionarios$nome
+```
+
+```
+## [1] "Marx"      "Weber"     "Durkheim"  "Arendt"    "Maquiavel"
+```
+
+```r
+Turma$nome_aluno
+```
+
+```
+## [1] "Jurgen Habermas" "Karl Popper"     "John Rawls"      "Paulo Freire"
+```
+
+
+---
+
+## Exploração dos dados
+
+1. Inicie pelo exame de cada variável por si mesma. Em seguida, estude as relações entre essas variáveis.
+&lt;p&gt; 
+2. Sugestão: Tente fazer duas ações. 1) Inicie pelo gráfico. 2) Adicione então resumos numéricos (exemplo média, moda, mediana) de aspectos específicos dos dados.
+
+## Distribuição de uma variável
+
+* A Distribuição de uma variável nos diz quais os valores assumidos por ela e qual a frequência com que ela os assume.
+
+*  Os valores de uma variável categórica são rótulos para as categorias. A distribuição de uma variável categorica lista as categorias e dá a contagem e o percentual de registros que estão em cada uma delas.
+
+*exemplo de um gráfico e uma distribuição de frequencia no R*
+
+---
+
+background-image: url(http://www.planwallpaper.com/cool-background#static/images/cool-background.jpg)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+## Distribuição de uma variável quantitativa
+
+---
+
+## Distribuição de uma variável quantitativa
+variáveis quantitativas geralmente assumem muitos valores. A distribuição nos diz quais valores ela assume e com qual frequência os assume. O gráfico da distribuição torna-se mais claro se agrupamos valores próximos. O gráfico mais comum da distribuição de uma variável quantitativa é o **histograma**.
+
+![](AulaUnirio_files/figure-html/hist-1.png)&lt;!-- --&gt;
+
+---
+
+## Análise de um histograma
+
+1. Em qualquer gráfico de dados, procure pelo **padrão geral** e por **desvios** notáveis desse padrão.
+2. Você pode descrever o padrão geral de um histograma por sua ** forma, centro e dispersão.**
+Um tipo importante de desvio é o **outlier** (valor atípico), um valor individual que está fora do padrão geral.
+
+---
+
+## Medida de centro: média, mediana, moda
+Relembrando...
+A Média é a soma de todos os valores de um conjunto de observações dividido pelo número de observações.
+
+```
+
+```
+
+`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
+
+A Mediana (Md) é o ponto no meio de uma distribuição, o número tal que metade das observações é menor que ele e metade , maior.
+&lt;p&gt;
+A Moda é a observação que mais se repete
+
+---
+
+background-image: url(http://www.planwallpaper.com/cool-background#static/images/cool-background.jpg)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+## Média, mediana e moda
+
+---
+
+## Medida de centro: média, mediana, moda
+Quando a  Mediana é melhor do que a média para representar o centro de um conjunto de dados?
+Para responder isso, vamos criar dois vetores no R:
+&lt;p&gt; 
+vetor1&lt;- c(1,2,3,4,5)
+e 
+&lt;p&gt; vetor2&lt;- c(1,2,3,4,50000) 
+
+---
+
+## Medida de centro: média, mediana, moda
+Quando a  Mediana é melhor do que a média para representar o centro de um conjunto de dados?
+Agora vamos calcular a média e a mediana desses vetores.
+
+```r
+vetor1&lt;- c(1,2,3,4,5)
+vetor2&lt;- c(1,2,3,4,50000) 
+mean(vetor1)
+```
+
+```
+## [1] 3
+```
+
+```r
+mean(vetor2)
+```
+
+```
+## [1] 10002
+```
+
+```r
+median(vetor1)
+```
+
+```
+## [1] 3
+```
+
+```r
+median(vetor2)
+```
+
+```
+## [1] 3
+```
+
+---
+
+## Medida de centro: média, mediana, moda
+Quando a  Mediana é melhor do que a Média para representar o centro de um conjunto de dados?
+&lt;p&gt;
+A média e a mediana de uma distribuição razoavelmente simétrica estão bem próximas uma da outra. Se a distribuição for exatamente simétrica, a média e a mediana serão exatamente iguais. Em uma distribuição assimétrica, a média está numa posição mais extrema do que a mediana. A média também é mais sensível aos outliers. 
+
+
+---
+
+## Para calcular os quartis 
+1. Ordene as observações em ordem crescente e localize a mediana.
+2. O **primeiro quartil Q1** é a mediana das observações localizadas a esquerda da mediana 
+3. O **terceiro quartil Q3** é a mediana das observações localizadas a direita da mediana
+
+---
+
+## O resumo dos cinco números
+O resumo dos cinco números consiste no menor valor, no primeiro quartil, na mediana, no terceiro quartil e no maior valor. Estes cinco números oferecem uma descrição razoavelmente completa do cento e da dispersão dos dados. No R podemos obter esse resumo com o comando summary( )
+
+
+```r
+summary(vetor1)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##       1       2       3       3       4       5
+```
+
+```r
+summary(vetor2)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##       1       2       3   10000       4   50000
+```
+
+
+---
+
+## O resumo dos cinco números
+O resumo dos cinco números para a variável HP do banco de dados Mtcars
+
+
+```r
+summary(mtcars$hp)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    52.0    96.5   123.0   146.7   180.0   335.0
+```
+
+O resumo dos cinco números para a variável MPG do banco de dados Mtcars
+
+```r
+summary(mtcars$mpg)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   10.40   15.42   19.20   20.09   22.80   33.90
+```
+
+O resumo dos cinco números para a variável popdensity do banco de dados Midwest
+
+
+```r
+summary(midwest$popdensity)
+```
+
+```
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##    85.05   622.40  1156.00  3098.00  2330.00 88020.00
+```
+
+
+---
+
+## Poderíamos representar graficamente o resumo dos cinco números?
+
+---
+
+## Poderíamos representar graficamente o resumo dos cinco números?
+### O BOX PLOT
+![](AulaUnirio_files/figure-html/quartil4-1.png)&lt;!-- --&gt;
+
+---
+
+### O BOX PLOT
+O Box-Plot é o gráfico do resumo dos cinco números.
+1. A caixa central abarca os quartis Q1 e Q3.
+2. Uma linha central marca a mediana.
+3. Linhas se estendem da caixa até o menor e o maior valor
+
+
+---
+
+### O BOX PLOT
+A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quartil
+
+![](AulaUnirio_files/figure-html/quartil5-1.png)&lt;!-- --&gt;
+
+
+---
+
+### O BOX PLOT
+A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quartil
+
+```
+
+```
+
+
+
+`$$AIQ=Q1-Q3$$`
+
+Uma observação é um valor suspeito de ser um outlier se ela cais a mais de 1,5*AIQ acima do terceiro quartil ou abaixo do primeiro quartil. No caso do HP
+
+
+```
+
+```
+
+$$ Q3+1,5*AIQ = 180+1,5*(180-96,5) = 180 + 125.25 = 305,5 $$
+
+
+---
+
+background-image: url(http://www.planwallpaper.com/cool-background#static/images/cool-background.jpg)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+## Medidas de dispersão: Variância e Desvio Padrão
+
+---
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('showSlide', function (slide) {setTimeout(function() {window.dispatchEvent(new Event('resize'));}, 100)});</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
