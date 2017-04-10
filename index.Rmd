@@ -67,6 +67,17 @@ Outras organizações que utilizam o R: IBGE, FGV, IBOPE, Ministério do planeja
 
 ---
 
+## R nas melhores revistas científicas
+```{r, echo=FALSE, fig.height=5, fig.width=10}
+library(png)
+library(grid)
+img11 <- readPNG("C:/Users/Hp/Documents/GitHub/aulaunirio.github.io/R em Revistas Científicas.png")
+ grid.raster(img11)
+```
+[Fonte](http://estatisticacomr.com.br/r-nas-revistas-cientificas/)
+
+---
+
 ## Número de pacotes do R ao longo do tempo
 ```{r, echo=FALSE, fig.height=5, fig.width=10}
 library(png)
@@ -81,7 +92,7 @@ grid.raster(img1)
 
 ## Entender não basta 
 Não quero só que você entenda esse gráfico, mas também quero dar oportunidade para você construir diversas análises desse tipo.
-```{r, echo=FALSE, fig.height=6, fig.width=8}
+```{r, echo=FALSE, fig.height=6, fig.width=8, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(ggthemes)
 df <- read.csv("buzzfeed_linkbait_headlines.csv", header=T)
@@ -510,7 +521,7 @@ O Box-Plot é o gráfico do resumo dos cinco números.
 ### O BOX PLOT
 A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quartil
 
-```{r quartil5, echo=FALSE, fig.height=6, fig.width=8}
+```{r quartil5, echo=FALSE, fig.height=6, fig.width=8, warning=FALSE, message=FALSE}
 a<-rnorm(1000, 50, 10) 
 b<-rnorm(1000, 50, 30) 
 c<-rep("a",1000)
@@ -533,7 +544,7 @@ A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quart
 
 
 
-$$AIQ=Q1-Q3$$
+$$AIQ=Q3-Q1$$
 
 Uma observação é um valor suspeito de ser um outlier se ela cais a mais de 1,5*AIQ acima do terceiro quartil ou abaixo do primeiro quartil. No caso do HP
 
