@@ -73,8 +73,22 @@ Outras organizações que utilizam o R: IBGE, FGV, IBOPE, Ministério do planeja
 
 ---
 
+## Análises Desenvolvidas pelo R
+
+[Transparência](https://duttross.shinyapps.io/transparencia1/)
+
+[Engajamento Orçamentário](https://duttross.shinyapps.io/Engajamento/)
+
+[Mapa da Rocinha](https://dataunirio.github.io/Rocinha/)
+
+[Unirio em números](http://rpubs.com/StevenDuttRoss/unirioemnumeros)
+
+[Gráfico Interativo GAE](http://gae.uniriotec.br/4/visualizacao.html)
+
+---
+
 ## Entender não basta 
-Não quero só que você entenda esse gráfico, mas também quero dar oportunidade para você construir diversas análises desse tipo.
+Ideia: Quero desenvolver!
 ![](index_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
 ###Parece interessante?
 
@@ -85,9 +99,9 @@ um sistema formal de **signos** regidos por regras **gramaticais** que, quando c
 (visão estruturalista da linguagem)
 
 ### Estatística como linguagem
-- 1. Natural: idiomas (oral, escrita, de sinais)
-- 2. Artificial: linguagem concebida por um indivíduo ou grupo (em vez de ter evoluído naturalmente)
-- 3. Formal:Matemática, Lógica, Computação e Estatística
+1. Natural: idiomas (oral, escrita, de sinais)
+2. Artificial: linguagem concebida por um indivíduo ou grupo (em vez de ter evoluído naturalmente)
+3. Formal:Matemática, Lógica, Computação e Estatística
 
 ---
 
@@ -125,7 +139,10 @@ um sistema formal de **signos** regidos por regras **gramaticais** que, quando c
 
 ## Sobre o trabalho final da disciplina
 
-Você deve **formular** um problema em seu contexto do mundo real, **planejar** seu trabalho estatístico em detalhes, **resolver** o problema através dos gráficos e estatísticas necessárias, e **concluir**, explicando que suas descobertas dizem sobre o contexto do mundo real (parecer)
+Você deve **formular** um problema em seu contexto do mundo real, **planejar** seu trabalho estatístico em detalhes, **resolver** o problema através dos gráficos e estatísticas necessárias, e **concluir**, explicando que suas descobertas dizem sobre o contexto do mundo real (parecer).
+
+### Aplicação de conceitos
+A ênfase será na compreensão e aplicação de conceitos e técnicas, em vez da demonstração de teoremas. O curso é baseado na aplicação prática usando a linguagem computacional R.
 
 ---
 
@@ -336,6 +353,17 @@ Valor médio das variáveis HP &amp; mpg e tabela dos CyL dos carros desse banco
 
 ## Outro modo de fazer isso é por meio de gráficos
 ![](index_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+## Atribuir um objeto no R
+
+O R é uma linguagem orientada a objetos que permite a manipulação e a análise de dados.
+
+AA &lt;- 5 &lt;br&gt;
+BB &lt;- 7 &lt;br&gt;
+CC &lt;- AA^2 &lt;br&gt;
+DD &lt;-AA+BB &lt;br&gt;
 
 ---
 
@@ -664,7 +692,10 @@ A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quart
 
 `$$AIQ=Q3-Q1$$`
 
-Uma observação é um valor suspeito de ser um outlier se ela cais a mais de 1,5*AIQ acima do terceiro quartil ou abaixo do primeiro quartil. No caso do HP
+Uma observação é suspeita de ser um outlier se ela for maior que 1,5*AIQ acima do terceiro quartil ou menor que esse valor abaixo do primeiro quartil. No caso do HP:
+
+
+
 
 
 ```
@@ -840,7 +871,7 @@ sd(conjunto4)
 "highlightStyle": "github",
 "highlightLines": true
 });
-if (window.HTMLWidgets) slideshow.on('showSlide', function (slide) {setTimeout(function() {window.dispatchEvent(new Event('resize'));}, 100)});</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -854,7 +885,7 @@ MathJax.Hub.Config({
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

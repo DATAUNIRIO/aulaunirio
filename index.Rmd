@@ -90,8 +90,22 @@ grid.raster(img1)
 
 ---
 
+## Análises Desenvolvidas pelo R
+
+[Transparência](https://duttross.shinyapps.io/transparencia1/)
+
+[Engajamento Orçamentário](https://duttross.shinyapps.io/Engajamento/)
+
+[Mapa da Rocinha](https://dataunirio.github.io/Rocinha/)
+
+[Unirio em números](http://rpubs.com/StevenDuttRoss/unirioemnumeros)
+
+[Gráfico Interativo GAE](http://gae.uniriotec.br/4/visualizacao.html)
+
+---
+
 ## Entender não basta 
-Não quero só que você entenda esse gráfico, mas também quero dar oportunidade para você construir diversas análises desse tipo.
+Ideia: Quero desenvolver!
 ```{r, echo=FALSE, fig.height=6, fig.width=8, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(ggthemes)
@@ -114,9 +128,9 @@ um sistema formal de **signos** regidos por regras **gramaticais** que, quando c
 (visão estruturalista da linguagem)
 
 ### Estatística como linguagem
-- 1. Natural: idiomas (oral, escrita, de sinais)
-- 2. Artificial: linguagem concebida por um indivíduo ou grupo (em vez de ter evoluído naturalmente)
-- 3. Formal:Matemática, Lógica, Computação e Estatística
+1. Natural: idiomas (oral, escrita, de sinais)
+2. Artificial: linguagem concebida por um indivíduo ou grupo (em vez de ter evoluído naturalmente)
+3. Formal:Matemática, Lógica, Computação e Estatística
 
 ---
 
@@ -154,7 +168,10 @@ um sistema formal de **signos** regidos por regras **gramaticais** que, quando c
 
 ## Sobre o trabalho final da disciplina
 
-Você deve **formular** um problema em seu contexto do mundo real, **planejar** seu trabalho estatístico em detalhes, **resolver** o problema através dos gráficos e estatísticas necessárias, e **concluir**, explicando que suas descobertas dizem sobre o contexto do mundo real (parecer)
+Você deve **formular** um problema em seu contexto do mundo real, **planejar** seu trabalho estatístico em detalhes, **resolver** o problema através dos gráficos e estatísticas necessárias, e **concluir**, explicando que suas descobertas dizem sobre o contexto do mundo real (parecer).
+
+### Aplicação de conceitos
+A ênfase será na compreensão e aplicação de conceitos e técnicas, em vez da demonstração de teoremas. O curso é baseado na aplicação prática usando a linguagem computacional R.
 
 ---
 
@@ -286,6 +303,17 @@ table(mtcars$cyl)
 library(ggplot2)
 qplot(wt, mpg, data = mtcars)
 ```
+
+---
+
+## Atribuir um objeto no R
+
+O R é uma linguagem orientada a objetos que permite a manipulação e a análise de dados.
+
+AA <- 5 <br>
+BB <- 7 <br>
+CC <- AA^2 <br>
+DD <-AA+BB <br>
 
 ---
 
@@ -546,7 +574,10 @@ A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quart
 
 $$AIQ=Q3-Q1$$
 
-Uma observação é um valor suspeito de ser um outlier se ela cais a mais de 1,5*AIQ acima do terceiro quartil ou abaixo do primeiro quartil. No caso do HP
+Uma observação é suspeita de ser um outlier se ela for maior que 1,5*AIQ acima do terceiro quartil ou menor que esse valor abaixo do primeiro quartil. No caso do HP:
+
+
+
 
 
 ```
