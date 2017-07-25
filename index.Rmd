@@ -613,7 +613,7 @@ conjunto2<-c(4,6,8,10,12,14,16)
 conjunto3<-c(7,8,9,10,11,12,13)
 conjunto4<-c(10,10,10,10,10,10,10)
 ```
-Vamos agora calcular a média desses quatro conjuntos de dados
+Vamos agora calcular a média desses conjuntos de dados
 ```{r variancia3, echo=TRUE}
 mean(conjunto1)
 mean(conjunto2)
