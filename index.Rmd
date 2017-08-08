@@ -100,6 +100,8 @@ grid.raster(img1)
 
 [Unirio em números](http://rpubs.com/StevenDuttRoss/unirioemnumeros)
 
+[Gráfico Interativo DATAUNIRIO](https://dataunirio.github.io/streetview/)
+
 [Gráfico Interativo GAE](http://gae.uniriotec.br/4/visualizacao.html)
 
 ---
@@ -418,6 +420,8 @@ hist(mtcars$hp, col="red", main = "Histograma do HP")
 2. Você pode descrever o padrão geral de um histograma por sua ** forma, centro e dispersão.**
 Um tipo importante de desvio é o **outlier** (valor atípico), um valor individual que está fora do padrão geral.
 
+Um histograma interessante pode ser visto [aqui](http://tinlizzie.org/histograms/)
+
 ---
 
 ## Medida de centro: média, mediana, moda
@@ -701,4 +705,12 @@ sd(conjunto2)
 sd(conjunto3)
 sd(conjunto4)
 ```
+
+---
+
+\begin{equation}
+f(x) = \frac{1}{2\pi\sigma^{2}} e^{-\frac{1}{2 \sigma^{2}} (x - \mu)^{2}} 
+\end{equation}
+
+---
 
