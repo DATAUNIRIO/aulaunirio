@@ -90,14 +90,6 @@ grid.raster(img1)
 
 ---
 
-background-image: url(C:/Users/Hp/Documents/GitHub/aulaunirio.github.io/GIF/swamp.gif)
-background-size: contain
-class: inverse, center, bottom
-
-## Acho que tenho uma ideia de como a **Estatística** é vista pelo pessoal.
-
----
-
 ## Análises Desenvolvidas no R
 
 [Transparência](https://duttross.shinyapps.io/transparencia1/)
