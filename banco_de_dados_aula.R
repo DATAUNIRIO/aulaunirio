@@ -186,8 +186,8 @@ remove(nomes2)
 attributes(dados_carros)
 attributes(dados_estudantes)
 
-cat(paste0("Acesse o site: http://archive.ics.uci.edu/ml/datasets/Student%2BPerformance ou http://archive.ics.uci.edu/ml/datasets/Car+Evaluation para maiores informações sobre os dois bancos de dados", "\n","\n"))
+cat(paste0("Acesse o site: http://archive.ics.uci.edu/ml/datasets/Student%2BPerformance ou http://archive.ics.uci.edu/ml/datasets/Car+Evaluation para maiores informaçoes sobre os dois bancos de dados", "\n","\n"))
 
-cat(paste0('Um exemplo de análise: boxplot(dados_estudantes$nota_terceiro_no_POR~dados_estudantes$sexo) ', '\n'))
+cat(paste0('Um exemplo de analise:' ,"\n",'boxplot(dados_estudantes$nota_terceiro_no_POR~dados_estudantes$sexo) ', '\n',"\n"))
 
-cat('Escreva "attributes(dados_estudantes)" ou  "attributes(dados_carros)"para acessar ao dicionário de dados')
+cat('Escreva "attributes(dados_estudantes)" ou  "attributes(dados_carros)"para acessar ao dicionario de dados')
