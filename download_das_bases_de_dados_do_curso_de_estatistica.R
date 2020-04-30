@@ -47,5 +47,5 @@ remove(LOCAL,bases_curso_estatistica)
 # local com as bases de dados
 #--------------------------------------------------------------------
 
-print("Local dos arquivos...")
+print("Local dos bancos de dados...")
 print(getwd())
