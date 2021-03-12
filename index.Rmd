@@ -1,12 +1,15 @@
 ---
 title: "Estatística, Ciência de Dados e Sociedade"
-author: "Steven Dutt Ross"
+date: ' `r icon::fa("user-circle")` [**Prof. Steven Dutt Ross**](https://steven.metodosquantitativos.com/) <br><br> `r icon::fa("chalkboard-teacher")` [**Atividades**](https://atividades.metodosquantitativos.com/) <br> `r icon::fa("user-graduate")` [**Aulas**](https://aulas.metodosquantitativos.com/) <br> `r icon::fa("book-reader")` [**Livro**](https://livro.metodosquantitativos.com/docs/) <br>' 
+categories: ["Estatística","Ciência de Dados","UNIRIO"]
+tags: ["Estatística","Ciência de Dados","UNIRIO"]
 output:
   xaringan::moon_reader:
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
+      ratio: "16:9"
 ---
 
 ```{r setup, include=FALSE}
@@ -355,7 +358,7 @@ Turma$nome_aluno
 
 *  Os valores de uma variável categórica são rótulos para as categorias. A distribuição de uma variável categorica lista as categorias e dá a contagem e o percentual de registros que estão em cada uma delas.
 
-*exemplo de um gráfico e uma distribuição de frequencia no R*
+
 
 ---
 
