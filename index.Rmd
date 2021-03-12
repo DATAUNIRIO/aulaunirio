@@ -78,17 +78,6 @@ img11 <- readPNG("C:/Users/Hp/Documents/GitHub/aulaunirio.github.io/R em Revista
 
 ---
 
-## Número de pacotes do R ao longo do tempo
-```{r, echo=FALSE, fig.height=5, fig.width=10}
-library(png)
-library(grid)
-img1 <- readPNG("C:/Users/Hp/Desktop/R/Apresentacoes/CRAN Packages.png")
-#img1 <- readPNG("C:/Users/Steven/Google Drive/google maps e R/R Markdown/Slidify/teste 1/teste/CRAN Packages.png")
-grid.raster(img1)
-#![](https://2.bp.blogspot.com/-_g4B3uM17hY/WGJpUaiypHI/AAAAAAAAFvI/1TSwAEw1vtUBG8trJinfc2grhmeXiwFdgCLcB/s1600/CRAN%2BPackages.png)
-```
-
----
 
 ## Análises Desenvolvidas no R
 
@@ -109,9 +98,9 @@ grid.raster(img1)
 # Minha resposta a afirmação: 
 # "Não sou você (estatístico), nunca vou conseguir fazer isso"
 
-## Análise Desenvolvida no R pelo aluno Gabriel Alves - Adm/Unirio
+## Análise Desenvolvida no R pelos(as) alunos()
 
-[Dashboard da Mortalidade Infantil](https://dashboardunirio.000webhostapp.com/)
+[Trabalhos dos alunos (as)](https://dataunirio.github.io/Trabalhos_alunos_UNIRIO/)
 
 ---
 
@@ -139,40 +128,12 @@ ggplot(df, aes(x=listicle_size, y=num_fb_shares)) +
 
 
 ## Aplicação de conceitos
-A ênfase será na compreensão e aplicação de conceitos e técnicas, em vez da demonstração de teoremas. O curso é baseado na aplicação prática usando a linguagem computacional R.
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-2. Sempre olhe os dados: A procedência dos dados é importante
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-2. Sempre olhe os dados: A procedência dos dados é importante
-3. A variação está em toda parte
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-2. Sempre olhe os dados: A procedência dos dados é importante
-3. A variação está em toda parte
+A ênfase será na compreensão e aplicação de conceitos e técnicas, em vez da demonstração de teoremas. O curso é baseado na aplicação prática usando a linguagem computacional R ou Python.
 
 ### Sobre o trabalho final da disciplina
 
 Você deve **formular** um problema em seu contexto do mundo real, **planejar** seu trabalho estatístico em detalhes, **resolver** o problema através dos gráficos e estatísticas necessárias, e **concluir**, explicando que suas descobertas dizem sobre o contexto do mundo real (parecer).
+
 
 ---
 
@@ -189,7 +150,7 @@ Uma variável é qualquer característica do registro. Uma variável pode assumi
 
 **Variáveis qualitativas**  posiciona um registro em um dos diversos grupos ou categorias. Também chamada de **Variável categórica**
 
-**Variáveis quantitativa**  assume valores númericos com os quais faz sentido efetuarem-se operações aritméticas, tais como adição e cálculo de médias. Os valores de uma variável quantitativa são usualmente registrados em uma unidade de medida, tal como segundos ou quilogramas 
+**Variáveis quantitativa**  assume valores númericos com os quais faz sentido efetuarem-se operações aritméticas, tais como adição e cálculo de médias. Os valores de uma variável quantitativa são usualmente registrados em uma unidade de medida, tal como segundos ou quilogramas. 
 
 
 ---
@@ -255,9 +216,11 @@ DT::datatable(
 ## Outro exemplo: Mtcars Data
 Performance de carros (10 informações)
 ```{r, echo=FALSE}
-DT::datatable(
-  head(mtcars, 10),
-  fillContainer = FALSE, options = list(pageLength = 5))
+data(mtcars)
+knitr::kable(head(mtcars, 10), 'html')
+#DT::datatable(
+#  head(mtcars, 10),
+#  fillContainer = FALSE, options = list(pageLength = 5))
 ```
 
 ---
@@ -320,7 +283,7 @@ DD <-AA+BB <br>
 
 ## Criando vetores
 
-O comando c() pode ser usada para criar vetores de objetos juntando coisas.
+O comando *c()* pode ser usada para criar vetores de objetos juntando coisas.
 
 ```{r vetor}
 x <- c(0.3, 0.9, 1.1)          ## numerico
@@ -370,7 +333,7 @@ Turma
 
 ## Data.Frame: Outro banco de dados
 
-Para selecionar colunas em um data.frame é utilizado o simbolo $ 
+Para selecionar colunas em um *data.frame* é utilizado o simbolo $ 
 
 ```{r}
 Funcionarios$nome
@@ -567,7 +530,7 @@ boxplot(mdata$value ~ mdata$variable, col=c("tomato","royalblue"),data=mdata)
 ---
 
 ### O BOX PLOT
-A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quartil
+A Amplitude interquartil - AIQ é a distância entre o primeiro e o terceiro quartil.
 
 ```
 

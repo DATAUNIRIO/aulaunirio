@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="" xml:lang="">
   <head>
     <title>Estatística, Ciência de Dados e Sociedade</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="author" content="Steven Dutt Ross" />
-    <link href="libs/remark-css/example.css" rel="stylesheet" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/jquery/jquery.min.js"></script>
     <script src="libs/datatables-binding/datatables.js"></script>
@@ -68,10 +70,6 @@ Outras organizações que utilizam o R: IBGE, FGV, IBOPE, Ministério do planeja
 
 ---
 
-## Número de pacotes do R ao longo do tempo
-![](index_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
-
----
 
 ## Análises Desenvolvidas no R
 
@@ -92,15 +90,15 @@ Outras organizações que utilizam o R: IBGE, FGV, IBOPE, Ministério do planeja
 # Minha resposta a afirmação: 
 # "Não sou você (estatístico), nunca vou conseguir fazer isso"
 
-## Análise Desenvolvida no R pelo aluno Gabriel Alves - Adm/Unirio
+## Análise Desenvolvida no R pelos(as) alunos()
 
-[Dashboard da Mortalidade Infantil](https://dashboardunirio.000webhostapp.com/)
+[Trabalhos dos alunos (as)](https://dataunirio.github.io/Trabalhos_alunos_UNIRIO/)
 
 ---
 
 ## Entender não basta 
 Ideia: Quero desenvolver!
-![](index_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+![](index_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 ###Parece interessante?
 
 ---
@@ -110,40 +108,12 @@ Ideia: Quero desenvolver!
 
 
 ## Aplicação de conceitos
-A ênfase será na compreensão e aplicação de conceitos e técnicas, em vez da demonstração de teoremas. O curso é baseado na aplicação prática usando a linguagem computacional R.
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-2. Sempre olhe os dados: A procedência dos dados é importante
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-2. Sempre olhe os dados: A procedência dos dados é importante
-3. A variação está em toda parte
-
----
-
-## Estatística 
-### Estatística como ciência do aprendizado
-1. Estatística é a ciência do aprendizado a partir dos dados
-2. Sempre olhe os dados: A procedência dos dados é importante
-3. A variação está em toda parte
+A ênfase será na compreensão e aplicação de conceitos e técnicas, em vez da demonstração de teoremas. O curso é baseado na aplicação prática usando a linguagem computacional R ou Python.
 
 ### Sobre o trabalho final da disciplina
 
 Você deve **formular** um problema em seu contexto do mundo real, **planejar** seu trabalho estatístico em detalhes, **resolver** o problema através dos gráficos e estatísticas necessárias, e **concluir**, explicando que suas descobertas dizem sobre o contexto do mundo real (parecer).
+
 
 ---
 
@@ -160,7 +130,7 @@ Uma variável é qualquer característica do registro. Uma variável pode assumi
 
 **Variáveis qualitativas**  posiciona um registro em um dos diversos grupos ou categorias. Também chamada de **Variável categórica**
 
-**Variáveis quantitativa**  assume valores númericos com os quais faz sentido efetuarem-se operações aritméticas, tais como adição e cálculo de médias. Os valores de uma variável quantitativa são usualmente registrados em uma unidade de medida, tal como segundos ou quilogramas 
+**Variáveis quantitativa**  assume valores númericos com os quais faz sentido efetuarem-se operações aritméticas, tais como adição e cálculo de médias. Os valores de uma variável quantitativa são usualmente registrados em uma unidade de medida, tal como segundos ou quilogramas. 
 
 
 ---
@@ -290,8 +260,166 @@ Informações Demográficas dos municípios do Meio-Oeste
 
 ## Outro exemplo: Mtcars Data
 Performance de carros (10 informações)
-<div id="htmlwidget-ae509a4c9a371dce64a8" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ae509a4c9a371dce64a8">{"x":{"filter":"none","fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2],[6,6,4,6,8,6,8,4,4,6],[160,160,108,258,360,225,360,146.7,140.8,167.6],[110,110,93,110,175,105,245,62,95,123],[3.9,3.9,3.85,3.08,3.15,2.76,3.21,3.69,3.92,3.92],[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44],[16.46,17.02,18.61,19.44,17.02,20.22,15.84,20,22.9,18.3],[0,0,1,1,0,1,0,1,1,1],[1,1,1,0,0,0,0,0,0,0],[4,4,4,3,3,3,3,4,4,4],[4,4,1,1,2,1,4,2,2,4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; mpg &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cyl &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; disp &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; hp &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; drat &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; wt &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; qsec &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; vs &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; am &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; gear &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; carb &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mazda RX4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 160.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.620 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16.46 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mazda RX4 Wag &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 160.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.875 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Datsun 710 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 108.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 93 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.85 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.320 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.61 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hornet 4 Drive &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 258.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.08 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.215 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19.44 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hornet Sportabout &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 360.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 175 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.440 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Valiant &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 225.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.76 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.460 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Duster 360 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 360.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 245 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.21 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.570 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 15.84 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Merc 240D &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 24.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 146.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 62 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.69 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.190 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Merc 230 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 95 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.92 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.150 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Merc 280 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 167.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 123 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.92 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.440 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 ---
 
@@ -353,7 +481,7 @@ Valor médio das variáveis HP &amp; mpg e tabela dos CyL dos carros desse banco
 ---
 
 ## Outro modo de fazer isso é por meio de gráficos
-![](index_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](index_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -370,7 +498,7 @@ DD &lt;-AA+BB &lt;br&gt;
 
 ## Criando vetores
 
-O comando c() pode ser usada para criar vetores de objetos juntando coisas.
+O comando *c()* pode ser usada para criar vetores de objetos juntando coisas.
 
 
 ```r
@@ -433,7 +561,7 @@ Turma &lt;- data.frame(nome_aluno = c("Jurgen Habermas", "Karl Popper", "John Ra
 
 ## Data.Frame: Outro banco de dados
 
-Para selecionar colunas em um data.frame é utilizado o simbolo $ 
+Para selecionar colunas em um *data.frame* é utilizado o simbolo $ 
 
 
 ```r
@@ -685,7 +813,7 @@ A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quart
 ---
 
 ### O BOX PLOT
-A Amplitude interquartil AIQ é a distância entre o primeiro e o terceiro quartil
+A Amplitude interquartil - AIQ é a distância entre o primeiro e o terceiro quartil.
 
 ```
 
@@ -874,28 +1002,122 @@ f(x) = \frac{1}{2\pi\sigma^{2}} e^{-\frac{1}{2 \sigma^{2}} (x - \mu)^{2}}
 \end{equation}`
 
 ---
+
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
-(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  }
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
 });
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);
